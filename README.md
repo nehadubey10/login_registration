@@ -1,18 +1,5 @@
 # Simple Django Login and Registration
 
-An example of Django project with basic user functionality.
-
-## Screenshots
-
-| Log In | Create an account | Authorized page |
-| -------|--------------|-----------------|
-| <img src="./screenshots/login.png" width="200"> | <img src="./screenshots/create_an_account.png" width="200"> | <img src="./screenshots/authorized_page.png" width="200"> |
-
-| Password reset | Set new password | Password change |
-| ---------------|------------------|-----------------|
-| <img src="./screenshots/password_reset.png" width="200"> | <img src="./screenshots/set_new_password.png" width="200"> | <img src="./screenshots/password_change.png" width="200"> |
-
-## Functionality
 
 - Log in
     - via username & password
@@ -30,10 +17,8 @@ An example of Django project with basic user functionality.
 - Change profile
 - Multilingual: English, French, Russian, Simplified Chinese and Spanish
 
-If you need dynamic URLs with the language code, check out https://github.com/egorsmkv/simple-django-login-and-register-dynamic-lang
 
 ## Installing
-
 ### Clone the project
 
 ```bash
@@ -45,9 +30,10 @@ cd simple-django-login-and-register
 
 ```bash
 pip install poetry
-
 poetry install
 poetry shell
+or 
+pip install -r requirment.txt
 ```
 
 ### Configure the settings (connection to the database, connection to an SMTP server, and other options)
@@ -59,13 +45,13 @@ poetry shell
 ### Apply migrations
 
 ```bash
-python source/manage.py migrate
+python manage.py migrate
 ```
 
 ### Collect static files (only on a production server)
 
 ```bash
-python source/manage.py collectstatic
+python manage.py collectstatic
 ```
 
 ### Running
@@ -75,5 +61,5 @@ python source/manage.py collectstatic
 Just run this command:
 
 ```bash
-python source/manage.py runserver
+python manage.py runserver
 ```
